@@ -8,23 +8,29 @@
 
 import Foundation
 
-class ToDoObj {
+class ToDoObjList {
     var title: String
-    var date: String
-    var desc: String
-    var completed: Bool
     
-    init(title: String, date: String?, desc: String?) {
+    init(title: String) {
         self.title = title
-        self.date = date ?? String.getISOTimestamp().convertISODate()
-        self.desc = desc ?? ""
-        self.completed = false
     }
 }
 
-extension ToDoObj{
-    public class func mockData() -> [ToDoObj] {
-        let ToDoList = [ToDoObj(title: "Pizza", date: nil, desc: nil), ToDoObj(title: "Derp", date: nil, desc: nil)]
+extension ToDoObjList{
+    public class func defaultData() -> [ToDoObjList] {
+        let ToDoList = [ToDoObjList(title: "My Day"), ToDoObjList(title: "Important"), ToDoObjList(title: "Planned"), ToDoObjList(title: "Tasks")]
         return ToDoList
+    }
+}
+
+class ToDoObjTasks {
+    var taskTitle: String
+    var date: String
+    var completed: Bool
+    
+    init(taskTitle: String, date: String?, desc: String?){
+        self.taskTitle = taskTitle
+        self.date = date ?? String.getISOTimestamp().convertISODate()
+        self.completed = false
     }
 }
