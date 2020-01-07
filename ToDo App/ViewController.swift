@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var rowSelect:Int = 0
+    
     private var todoItems = ToDoObjList.defaultData()
 //    {
 //        didSet{
@@ -56,6 +58,14 @@ class ViewController: UIViewController {
         todoItems.append(ToDoObjList(title: title))
 
         tableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .top)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MyDay" && rowSelect == 0{
+            
+        } else if segue.identifier == "MyList" && rowSelect > 0{
+            
+        }
     }
 }
 
@@ -121,11 +131,8 @@ extension ViewController: UITableViewDelegate{
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            //performSegue(withIdentifier: "MyDay", sender: self)
-        } else {
-            //performSegue(withIdentifier: "MyList", sender: self)
-        }
+        let indexPath = self.tableView.indexPathForSelectedRow
+        rowSelect = indexPath!.row
     }
 }
 
