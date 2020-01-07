@@ -15,4 +15,4 @@ Write about what the app is about
 
 ## gif
 
-![gif](Assets/app.gif)
+![gif](Assets/to do app demo.gif)
