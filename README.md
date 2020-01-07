@@ -11,4 +11,8 @@ Write about what the app is about
 
 ## screenshot of the app
 
-![description of image in case image fails to load](Assets/homescreen.png)
+![description of image in case image fails to load](Assets/homescreen1.png)
+
+## gif
+
+![gif](Assets/app.gif)
