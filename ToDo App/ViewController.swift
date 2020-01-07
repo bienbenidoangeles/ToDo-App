@@ -66,18 +66,19 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "toDoListCell", for: indexPath)
+        
+        let listCell = tableView.dequeueReusableCell(withIdentifier: "toDoListCell", for: indexPath)
 
         if indexPath.row < todoItems.count
         {
             let item = todoItems[indexPath.row]
-            cell.textLabel?.text = item.title
+            listCell.textLabel?.text = item.title
 
 //            let accessory: UITableViewCell.AccessoryType = item.completed ? .checkmark : .none
 //            cell.accessoryType = accessory
         }
 
-        return cell
+        return listCell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -118,5 +119,13 @@ extension ViewController: UITableViewDelegate{
 //            tableView.deleteRows(at: [indexPath], with: .top)
 //        }
 //    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            //performSegue(withIdentifier: "MyDay", sender: self)
+        } else {
+            //performSegue(withIdentifier: "MyList", sender: self)
+        }
+    }
 }
 
