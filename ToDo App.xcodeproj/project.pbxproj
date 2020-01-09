@@ -16,6 +16,7 @@
 		F16DBEB223C33C3200FC537C /* ToDo_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEB123C33C3200FC537C /* ToDo_AppTests.swift */; };
 		F16DBEBD23C33CE900FC537C /* ToDoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEBC23C33CE900FC537C /* ToDoDataModel.swift */; };
 		F16DBEBF23C356B200FC537C /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEBE23C356B200FC537C /* String+extensions.swift */; };
+		F16DBEC123C7092600FC537C /* MyDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEC023C7092600FC537C /* MyDayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		F16DBEB323C33C3200FC537C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F16DBEBC23C33CE900FC537C /* ToDoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataModel.swift; sourceTree = "<group>"; };
 		F16DBEBE23C356B200FC537C /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
+		F16DBEC023C7092600FC537C /* MyDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				F16DBE9C23C33C2F00FC537C /* SceneDelegate.swift */,
 				F16DBE9E23C33C2F00FC537C /* ViewController.swift */,
 				F16DBEA023C33C2F00FC537C /* Main.storyboard */,
+				F16DBEC023C7092600FC537C /* MyDayViewController.swift */,
 				F16DBEA323C33C3200FC537C /* Assets.xcassets */,
 				F16DBEA523C33C3200FC537C /* LaunchScreen.storyboard */,
 				F16DBEA823C33C3200FC537C /* Info.plist */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16DBE9F23C33C2F00FC537C /* ViewController.swift in Sources */,
+				F16DBEC123C7092600FC537C /* MyDayViewController.swift in Sources */,
 				F16DBE9B23C33C2F00FC537C /* AppDelegate.swift in Sources */,
 				F16DBE9D23C33C2F00FC537C /* SceneDelegate.swift in Sources */,
 				F16DBEBD23C33CE900FC537C /* ToDoDataModel.swift in Sources */,
