@@ -62,9 +62,15 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MyDay" && rowSelect == 0{
+            guard let detailVC = segue.destination as? MyDayViewController else {
+                fatalError("faliled to downcast to MyDayViewController")
+            }
+            
+            
+            
             
         } else if segue.identifier == "MyList" && rowSelect > 0{
-            
+            guard let detailVC = segue.destination as? 
         }
     }
 }
@@ -82,7 +88,7 @@ extension ViewController: UITableViewDataSource{
         if indexPath.row < todoItems.count
         {
             let item = todoItems[indexPath.row]
-            listCell.textLabel?.text = item.title
+            listCell.textLabel?.text = item.listTitle
 
 //            let accessory: UITableViewCell.AccessoryType = item.completed ? .checkmark : .none
 //            cell.accessoryType = accessory

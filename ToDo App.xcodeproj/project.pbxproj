@@ -85,16 +85,11 @@
 		F16DBE9923C33C2F00FC537C /* ToDo App */ = {
 			isa = PBXGroup;
 			children = (
-				F16DBE9A23C33C2F00FC537C /* AppDelegate.swift */,
-				F16DBE9C23C33C2F00FC537C /* SceneDelegate.swift */,
-				F16DBE9E23C33C2F00FC537C /* ViewController.swift */,
-				F16DBEA023C33C2F00FC537C /* Main.storyboard */,
-				F16DBEC023C7092600FC537C /* MyDayViewController.swift */,
-				F16DBEA323C33C3200FC537C /* Assets.xcassets */,
-				F16DBEA523C33C3200FC537C /* LaunchScreen.storyboard */,
+				F16DBEC723C7BEBB00FC537C /* Supporting Files */,
+				F16DBEC623C7BE8F00FC537C /* Extensions */,
+				F16DBEC523C7BE6400FC537C /* Models */,
+				F16DBEC423C7BE3000FC537C /* Controllers */,
 				F16DBEA823C33C3200FC537C /* Info.plist */,
-				F16DBEBC23C33CE900FC537C /* ToDoDataModel.swift */,
-				F16DBEBE23C356B200FC537C /* String+extensions.swift */,
 			);
 			path = "ToDo App";
 			sourceTree = "<group>";
@@ -106,6 +101,43 @@
 				F16DBEB323C33C3200FC537C /* Info.plist */,
 			);
 			path = "ToDo AppTests";
+			sourceTree = "<group>";
+		};
+		F16DBEC423C7BE3000FC537C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F16DBE9E23C33C2F00FC537C /* ViewController.swift */,
+				F16DBEC023C7092600FC537C /* MyDayViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F16DBEC523C7BE6400FC537C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F16DBEBC23C33CE900FC537C /* ToDoDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F16DBEC623C7BE8F00FC537C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F16DBEBE23C356B200FC537C /* String+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F16DBEC723C7BEBB00FC537C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F16DBE9A23C33C2F00FC537C /* AppDelegate.swift */,
+				F16DBE9C23C33C2F00FC537C /* SceneDelegate.swift */,
+				F16DBEA023C33C2F00FC537C /* Main.storyboard */,
+				F16DBEA323C33C3200FC537C /* Assets.xcassets */,
+				F16DBEA523C33C3200FC537C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
