@@ -18,6 +18,9 @@
 		F16DBEBF23C356B200FC537C /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEBE23C356B200FC537C /* String+extensions.swift */; };
 		F16DBEC123C7092600FC537C /* MyDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEC023C7092600FC537C /* MyDayViewController.swift */; };
 		F16DBEC923C7C01400FC537C /* DetailTaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBEC823C7C01400FC537C /* DetailTaskListViewController.swift */; };
+		F16DBECC23C7D33200FC537C /* TaskListsPopOverOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBECB23C7D33200FC537C /* TaskListsPopOverOptionsViewController.swift */; };
+		F16DBECE23C7DE3300FC537C /* AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBECD23C7DE3300FC537C /* AddNewTaskViewController.swift */; };
+		F16DBED023C7E08800FC537C /* DueDatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBECF23C7E08800FC537C /* DueDatePopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		F16DBEBE23C356B200FC537C /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		F16DBEC023C7092600FC537C /* MyDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewController.swift; sourceTree = "<group>"; };
 		F16DBEC823C7C01400FC537C /* DetailTaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskListViewController.swift; sourceTree = "<group>"; };
+		F16DBECB23C7D33200FC537C /* TaskListsPopOverOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListsPopOverOptionsViewController.swift; sourceTree = "<group>"; };
+		F16DBECD23C7DE3300FC537C /* AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewController.swift; sourceTree = "<group>"; };
+		F16DBECF23C7E08800FC537C /* DueDatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDatePopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		F16DBEC423C7BE3000FC537C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F16DBECA23C7D2C000FC537C /* Resuable Controllers */,
 				F16DBE9E23C33C2F00FC537C /* ViewController.swift */,
 				F16DBEC023C7092600FC537C /* MyDayViewController.swift */,
 				F16DBEC823C7C01400FC537C /* DetailTaskListViewController.swift */,
@@ -141,6 +148,16 @@
 				F16DBEA523C33C3200FC537C /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F16DBECA23C7D2C000FC537C /* Resuable Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F16DBECB23C7D33200FC537C /* TaskListsPopOverOptionsViewController.swift */,
+				F16DBECD23C7DE3300FC537C /* AddNewTaskViewController.swift */,
+				F16DBECF23C7E08800FC537C /* DueDatePopUpViewController.swift */,
+			);
+			path = "Resuable Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,10 +263,13 @@
 			files = (
 				F16DBE9F23C33C2F00FC537C /* ViewController.swift in Sources */,
 				F16DBEC123C7092600FC537C /* MyDayViewController.swift in Sources */,
+				F16DBED023C7E08800FC537C /* DueDatePopUpViewController.swift in Sources */,
 				F16DBE9B23C33C2F00FC537C /* AppDelegate.swift in Sources */,
 				F16DBE9D23C33C2F00FC537C /* SceneDelegate.swift in Sources */,
 				F16DBEBD23C33CE900FC537C /* ToDoDataModel.swift in Sources */,
 				F16DBEC923C7C01400FC537C /* DetailTaskListViewController.swift in Sources */,
+				F16DBECC23C7D33200FC537C /* TaskListsPopOverOptionsViewController.swift in Sources */,
+				F16DBECE23C7DE3300FC537C /* AddNewTaskViewController.swift in Sources */,
 				F16DBEBF23C356B200FC537C /* String+extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

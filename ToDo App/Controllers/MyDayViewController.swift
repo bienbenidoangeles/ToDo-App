@@ -10,7 +10,10 @@ import UIKit
 
 class MyDayViewController: UIViewController {
     
+    @IBOutlet weak var currentDateLabel: UILabel!
+    @IBOutlet weak var dailyImageView: UIImageView!
     
+    var passedObjFrmTaskList: ToDoObjList?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,8 @@ class MyDayViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    @IBAction func addEvent(_ sender: UIButton){
+        
+    }
 
 }

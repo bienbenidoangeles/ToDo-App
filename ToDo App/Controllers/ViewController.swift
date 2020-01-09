@@ -66,7 +66,9 @@ class ViewController: UIViewController {
                 fatalError("faliled to downcast to MyDayViewController")
             }
             
+            let selectedTaskList = todoItems[rowSelect]
             
+            detailVC.passedObjFrmTaskList = selectedTaskList
             
             
         } else if segue.identifier == "MyList" && rowSelect > 0{
