@@ -70,7 +70,9 @@ class ViewController: UIViewController {
             
             
         } else if segue.identifier == "MyList" && rowSelect > 0{
-            guard let detailVC = segue.destination as? 
+            guard let detailVC = segue.destination as? DetailTaskListViewController else {
+                fatalError("failed to downcast to DetailTaskListController")
+            }
         }
     }
 }

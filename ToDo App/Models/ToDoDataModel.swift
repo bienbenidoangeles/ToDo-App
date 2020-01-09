@@ -10,16 +10,18 @@ import Foundation
 
 class ToDoObjList {
     var listTitle: String
+    var storedTasksAsList: [ToDoObjTasksAsList]?
     
-    init(title: String) {
+    init(title: String, storedTasksAsList: [ToDoObjTasksAsList]? = nil) {
         self.listTitle = title
+        self.storedTasksAsList = storedTasksAsList
     }
 }
 
 extension ToDoObjList{
     public class func defaultData() -> [ToDoObjList] {
-        let ToDoList = [ToDoObjList(title: "My Day"), ToDoObjList(title: "Important"), ToDoObjList(title: "Planned"), ToDoObjList(title: "Tasks")]
-        return ToDoList
+        let toDoList = [ToDoObjList(title: "My Day"), ToDoObjList(title: "Important"), ToDoObjList(title: "Planned"), ToDoObjList(title: "Tasks")]
+        return toDoList
     }
 }
 
@@ -28,35 +30,31 @@ class ToDoObjTasksAsList {
     var date: String?
     var completed: Bool
     var favorited: Bool
+    var storedToDoObjTaskData: ToDoObjTaskData?
     
-    init(taskTitle: String, date: String? = nil, completed: Bool, favorited: Bool){
+    init(taskTitle: String, date: String? = nil, completed: Bool, favorited: Bool, storedToDoObjTaskData: ToDoObjTaskData? = nil){
         
         self.taskTitle = taskTitle
         self.date = date ?? String.getISOTimestamp().convertISODate()
         self.completed = false
         self.favorited = false
+        self.storedToDoObjTaskData = storedToDoObjTaskData
     }
 }
 
 class ToDoObjTaskData {
-    var completed: Bool
-    var taskTitle: String
-    var favorited: Bool
+    var toDoObjTasksAsListPreExtended: ToDoObjTasksAsList
     var addedToMyDay: Bool
-    var remindMe: Date?
-    var dueDate: String?
+    var remindMe: String?
     var rEpeat: String?
     var file: String?
     var note: String?
     
-    init(completed: Bool, taskTitle: String, favorited: Bool, addedToMyDay: Bool, remindMe: Date? = nil, dueDate: String? = nil, rEpeat: String? = nil, file: String? = nil, note: String? = nil){
+    init(addedToMyDay: Bool, remindMe: String? = nil, toDoObjTasksAsList: ToDoObjTasksAsList, rEpeat: String? = nil, file: String? = nil, note: String? = nil){
         
-        self.completed = completed
-        self.taskTitle = taskTitle
-        self.favorited = favorited
+        self.toDoObjTasksAsListPreExtended = toDoObjTasksAsList
         self.addedToMyDay = addedToMyDay
         self.remindMe = remindMe
-        self.dueDate = dueDate
         self.rEpeat = rEpeat
         self.file = file
         self.note = note

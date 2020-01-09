@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Task List View Controller-->
         <scene sceneID="4DN-Xp-VID">
             <objects>
-                <viewController id="VLf-Db-8aX" sceneMemberID="viewController">
+                <viewController id="VLf-Db-8aX" customClass="DetailTaskListViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GfY-86-JZm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,7 +475,7 @@
             <objects>
                 <viewController id="1QU-YD-Uld" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ovb-jF-AAU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fvm-9T-rlQ">
@@ -531,7 +531,7 @@
             <objects>
                 <viewController id="FHb-cD-J04" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2RT-fN-JRz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OrU-Zg-dPd">
@@ -681,7 +681,7 @@
             <objects>
                 <viewController id="7zk-L5-yJz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxa-ON-Pjg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Add note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ClQ-DK-7e8">
@@ -781,8 +781,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yGy-7q-fNS"/>
-        <segue reference="yeW-uI-Pnu"/>
-        <segue reference="j0K-7Z-z68"/>
-        <segue reference="99p-gU-Rn1"/>
+        <segue reference="M5u-hs-4eE"/>
+        <segue reference="i4s-RX-rB8"/>
+        <segue reference="etl-3d-4V0"/>
     </inferredMetricsTieBreakers>
 </document>
