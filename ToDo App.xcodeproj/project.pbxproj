@@ -72,6 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F110272F23D11EAA000758F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F16DBE8E23C33C2F00FC537C = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +100,7 @@
 		F16DBE9923C33C2F00FC537C /* ToDo App */ = {
 			isa = PBXGroup;
 			children = (
+				F110272F23D11EAA000758F7 /* Views */,
 				F16DBEC623C7BE8F00FC537C /* Extensions */,
 				F16DBEC723C7BEBB00FC537C /* Supporting Files */,
 				F16DBEC523C7BE6400FC537C /* Models */,

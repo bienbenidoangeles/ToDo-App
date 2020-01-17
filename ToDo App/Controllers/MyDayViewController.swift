@@ -17,7 +17,7 @@ class MyDayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = ""
         // Do any additional setup after loading the view.
     }
     

@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addedListToTableView: UITableView!
     
     var rowSelect:Int = 0
     
-    private var todoItems = ToDoObjList.defaultData()
+    private var toDoItems = ToDoObjList.defaultData()
+    private var toDoItemsFromOtherLists = [ToDoObjList]()
 //    {
 //        didSet{
 //            tableView.reloadData()
@@ -26,12 +28,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Things to do"
         delegatesAndDataSources()
+        shouldTableViewHide()
         //loadLongPress()
     }
     
     func delegatesAndDataSources(){
         tableView.dataSource = self
         tableView.delegate = self
+        addedListToTableView.dataSource = self
+        addedListToTableView.delegate = self
     }
     
     @IBAction func addToDoItemUI(_ sender: UIButton){
@@ -53,11 +58,19 @@ class ViewController: UIViewController {
     
     private func addToDoItemData(title: String)
     {
-        let newIndex = todoItems.count
+        let newIndex = toDoItemsFromOtherLists.count
 
-        todoItems.append(ToDoObjList(title: title))
+        toDoItemsFromOtherLists.append(ToDoObjList(title: title))
 
-        tableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .top)
+        addedListToTableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .top)
+    }
+    
+    private func shouldTableViewHide(){
+        if toDoItemsFromOtherLists.count > 0{
+            addedListToTableView.isHidden = false
+        } else {
+            addedListToTableView.isHidden = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,7 +79,7 @@ class ViewController: UIViewController {
                 fatalError("faliled to downcast to MyDayViewController")
             }
             
-            let selectedTaskList = todoItems[rowSelect]
+            let selectedTaskList = toDoItems[rowSelect]
             
             detailVC.passedObjFrmTaskList = selectedTaskList
             
@@ -82,17 +95,35 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoItems.count
+        return toDoItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let listCell = tableView.dequeueReusableCell(withIdentifier: "toDoListCell", for: indexPath)
-
-        if indexPath.row < todoItems.count
+        if tableView == tableView{
+            let myDayCell = tableView.dequeueReusableCell(withIdentifier: "myDayCell", for: indexPath)
+            let importantCell = tableView.dequeueReusableCell(withIdentifier: "importantCell", for: indexPath)
+            let plannedCell = tableView.dequeueReusableCell(withIdentifier: "plannedCell", for: indexPath)
+            let tasksCell = tableView.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath)
+            let defaultCells = [myDayCell, importantCell, plannedCell, tasksCell]
+            for (index, cell) in defaultCells.enumerated(){
+                let item = toDoItems[index]
+                cell.textLabel?.text = item.listTitle
+            }
+            
+        } else if tableView == addedListToTableView{
+            let otherListCell = tableView.dequeueReusableCell(withIdentifier: "newListCell", for: indexPath)
+        }
+        
+       
+        
+        
+        if indexPath.row < todoItemsFromOtherLists.count
         {
-            let item = todoItems[indexPath.row]
-            listCell.textLabel?.text = item.listTitle
+            
+//            let item = toDoItems[indexPath.row]
+//            listCell.textLabel?.text = item.listTitle
+            
 
 //            let accessory: UITableViewCell.AccessoryType = item.completed ? .checkmark : .none
 //            cell.accessoryType = accessory
